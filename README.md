@@ -9,3 +9,6 @@ https://github.com/swaywm/sway/issues/6760
 https://discussion.fedoraproject.org/t/how-do-i-edit-a-script-in-usr-bin-on-silverblue/36611
 
 There's more to come to make the nvidia drivers secure-bootable, but I wanted to just get this path documented before I forgot about it.
+
+To install the screenshot script:
+make install -f .local/bin/makefile
