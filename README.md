@@ -38,9 +38,10 @@ If your VPN uses `password-tls` and requires a password (in addition to certs), 
 [vpn]
 connection-type=password-tls
 username=your-username
-password-flags=1```
+password-flags=1
+```
 
-* password-flags=1 ensures NetworkManager prompts the user at connection time.
+password-flags=1 ensures NetworkManager prompts the user at connection time.
 
 #### 🔐 Prompting for the certificate password
 
@@ -66,7 +67,8 @@ username=your-username
 password-flags=1
 cert=/path/to/your/client.crt
 key=/path/to/your/client.key
-cert-pass-flags=1```
+cert-pass-flags=1
+```
 
 In all cases, do not include a [vpn-secrets] section with password=  or cert-pass= if you want the prompt.
 
@@ -77,6 +79,7 @@ After editing the .nmconnection file, make sure to fix the permissions and reloa
 sudo chown root:root /etc/NetworkManager/system-connections/your-vpn.nmconnection
 sudo chmod 600 /etc/NetworkManager/system-connections/your-vpn.nmconnection
 sudo nmcli connection reload
-nmcli connection up 'your-vpn'```
+nmcli connection up 'your-vpn'
+```
 
 User mileage may vary.
