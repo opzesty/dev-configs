@@ -1,0 +1,30 @@
+[connection]
+id=SEE Office
+uuid=06880255-4d08-4f04-afa5-a1be2b257aed
+type=vpn
+
+[vpn]
+auth=SHA256
+ca=/etc/openvpn/client/see_office/pfSense-UDP4-1194-zramirez.ca.crt
+cert=/etc/openvpn/client/see_office/pfSense-UDP4-1194-zramirez.crt.pem
+challenge-response-flags=2
+connection-type=password-tls
+dev=tun
+key=/etc/openvpn/client/see_office/pfSense-UDP4-1194-zramirez.key.pem
+password-flags=1
+remote={{ vpn_server_ip }}:1194:udp4
+remote-cert-tls=server
+ta=/etc/openvpn/client/see_office/pfSense-UDP4-1194-zramirez-tls.key
+ta-dir=1
+username=zramirez
+verify-x509-name=name:SitetoSite2Cert
+service-type=org.freedesktop.NetworkManager.openvpn
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+method=auto
+
+[proxy]
